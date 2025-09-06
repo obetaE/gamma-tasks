@@ -1,0 +1,204 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: var(--bg-secondary);
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+}
+
+.header h1 {
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  color: var(--text-secondary);
+}
+
+.explanation {
+  background-color: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 1.5rem;
+}
+
+.explanation h2 {
+  color: var(--accent-light);
+  margin: 1.5rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent-light);
+}
+
+.explanation p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.code {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 1rem 0;
+  font-family: monospace;
+  overflow-x: auto;
+  border: 1px solid var(--border-color);
+}
+
+.demoContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.demoBox {
+  height: 200px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-primary);
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.demoBox:hover {
+  transform: translateY(-5px);
+}
+
+.demoBox h3 {
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+/* Background attachment examples */
+.fixedBg {
+  background: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover fixed;
+}
+
+.scrollBg {
+  background: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover local;
+  overflow: auto;
+}
+
+.scrollContent {
+  height: 400px;
+  padding: 1.5rem;
+  color: var(--text-primary);
+}
+
+/* Background blend mode examples */
+.blendMultiply {
+  background: 
+    url('https://images.unsplash.com/photo-1559666126-84f389727b9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover,
+    linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  background-blend-mode: multiply;
+}
+
+.blendScreen {
+  background: 
+    url('https://images.unsplash.com/photo-1559666126-84f389727b9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover,
+    linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  background-blend-mode: screen;
+}
+
+.blendOverlay {
+  background: 
+    url('https://images.unsplash.com/photo-1559666126-84f389727b9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover,
+    linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  background-blend-mode: overlay;
+}
+
+/* Other background properties */
+.gradientBg {
+  background: linear-gradient(45deg, var(--french-violet) 0%, var(--heliotrope) 100%);
+}
+
+.radialBg {
+  background: radial-gradient(circle, var(--amethyst) 0%, var(--heliotrope) 100%);
+}
+
+.positionBg {
+  background: 
+    url('https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') no-repeat;
+  background-position: bottom right;
+  background-size: 50%;
+  background-color: var(--mauve);
+}
+
+.sizeCoverBg {
+  background: 
+    url('https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') center/cover;
+}
+
+.repeatBg {
+  background: 
+    url('https://images.unsplash.com/photo-1518837695005-2083093ee35b?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80') repeat;
+  background-size: 150px;
+}
+
+.originClipBg {
+  background: 
+    url('https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80') no-repeat;
+  background-origin: content-box;
+  background-clip: content-box;
+  background-color: var(--mauve);
+  padding: 1.5rem;
+  background-size: 80%;
+}
+
+.multipleBg {
+  background: 
+    url('https://images.unsplash.com/photo-1559666126-84f389727b9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80') top left/100px 100px no-repeat,
+    url('https://images.unsplash.com/photo-1418065460487-3e41a6c84dc5?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80') center/cover,
+    linear-gradient(135deg, var(--french-violet) 0%, var(--heliotrope) 100%);
+}
+
+.footer {
+  text-align: center;
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+}
+
+.propertyGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.propertyCard {
+  background-color: var(--bg-primary);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.propertyCard h3 {
+  color: var(--accent-light);
+  margin-bottom: 0.5rem;
+}
+
+.propertyCard p {
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
