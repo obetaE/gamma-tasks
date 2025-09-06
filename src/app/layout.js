@@ -1,7 +1,7 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
-import Navbar from '@/components/Navbar/navbar'
-import Footer from '@/components/Footer/footer'
+import Navbar from '@/components/Navbar/Navbar'
+import Footer from '@/components/Footer/Footer'
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { Poppins, Playfair_Display } from 'next/font/google';
 
