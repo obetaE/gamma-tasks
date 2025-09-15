@@ -5,9 +5,10 @@
   padding: 1rem 2rem;
   background-color: var(--bg-secondary);
   border-bottom: 1px solid var(--border-color);
+  position: relative;
 }
 
-.logo h2 {
+.logo{
   color: var(--accent-light);
   font-weight: 700;
 }
@@ -18,10 +19,29 @@
   gap: 2rem;
 }
 
+.loginBtn {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background-color: var(--accent-light);
+}
+
+.signupBtn {
+  background-color: var(--accent-primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.signupBtn:hover {
+  background-color: var(--accent-secondary);
+}
+
 .navLinks a {
   color: var(--text-secondary);
   text-decoration: none;
   transition: color 0.3s ease;
+  font-weight: 500;
 }
 
 .navLinks a:hover {
@@ -49,3 +69,75 @@
   height: 100%;
 }
 
+/* Mobile menu toggle button (hidden by default) */
+.menuToggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.menuToggle:focus {
+  outline: none;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  border-radius: 10px;
+  background-color: var(--text-primary);
+  transition: all 0.3s linear;
+  transform-origin: 1px;
+}
+
+/* Overlay for mobile menu */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .menuToggle {
+    display: flex;
+  }
+  
+  .navLinks {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 70%;
+    max-width: 300px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5rem 2rem;
+    background-color: var(--bg-secondary);
+    border-left: 1px solid var(--border-color);
+    transition: right 0.3s ease-in-out;
+    z-index: 10;
+    gap: 1.5rem;
+  }
+  
+  .navLinksOpen {
+    right: 0;
+  }
+  
+  .userProfile {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    width: 100%;
+  }
+}

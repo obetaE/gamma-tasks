@@ -1,0 +1,411 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: var(--bg-secondary);
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+}
+
+.header h1 {
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  color: var(--text-secondary);
+}
+
+.explanation {
+  background-color: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 1.5rem;
+}
+
+.explanation h2 {
+  color: var(--accent-light);
+  margin: 1.5rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent-light);
+}
+
+.explanation p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.code {
+  background-color: var(--bg-code);
+  color: var(--text-primary);
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 1rem 0;
+  font-family: monospace;
+  overflow-x: auto;
+  border: 1px solid var(--border-color);
+  white-space: pre-wrap;
+}
+
+.demoContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.demoItem {
+  background-color: var(--bg-primary);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.demoItem h3 {
+  color: var(--accent-light);
+  margin-bottom: 1rem;
+}
+
+.exampleBox {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  background-color: var(--bg-secondary);
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Text Content Example */
+.textContentExample p::before {
+  content: "Note: ";
+  color: var(--accent-primary);
+  font-weight: bold;
+}
+
+/* Empty Content Example */
+.emptyContentExample p::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--accent-primary);
+  margin-top: 8px;
+}
+
+/* Attribute Content Example */
+.attrContentExample p::after {
+  content: " (" attr(data-info) ")";
+  color: var(--accent-secondary);
+  font-size: 0.9em;
+}
+
+/* Decorative Example */
+.decorativeExample h4 {
+  text-align: center;
+  position: relative;
+}
+
+.decorativeExample h4::before,
+.decorativeExample h4::after {
+  content: "✦";
+  color: var(--accent-primary);
+  margin: 0 10px;
+}
+
+/* Bullets Example */
+.bulletsExample ul {
+  list-style: none;
+  padding: 0;
+}
+
+.bulletsExample li::before {
+  content: "➤";
+  color: var(--accent-primary);
+  margin-right: 8px;
+}
+
+/* Image Overlay Example */
+.imageOverlayExample .imageContainer {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.imageOverlayExample .imageContainer img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.imageOverlayExample .imageContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--accent-primary);
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 1;
+}
+
+.imageOverlayExample .imageContainer:hover::before {
+  opacity: 0.2;
+}
+
+.imageOverlayExample .imageContainer p {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  z-index: 2;
+  margin: 0;
+}
+
+/* Tooltip Example */
+.tooltipExample {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tooltipExample .tooltipTrigger {
+  position: relative;
+  cursor: pointer;
+  padding: 8px 12px;
+  background-color: var(--accent-primary);
+  color: white;
+  border-radius: 4px;
+}
+
+.tooltipExample .tooltipTrigger::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  border: 1px solid var(--border-color);
+}
+
+.tooltipExample .tooltipTrigger:hover::after {
+  opacity: 1;
+  visibility: visible;
+  bottom: calc(100% + 8px);
+}
+
+/* Checkbox Example */
+.checkboxExample {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkboxExample .checkboxLabel {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  padding-left: 30px;
+  min-height: 24px;
+}
+
+.checkboxExample .checkboxLabel input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkboxExample .checkboxLabel span::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--border-color);
+  border-radius: 3px;
+  margin-right: 8px;
+  vertical-align: middle;
+  transition: all 0.3s;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.checkboxExample .checkboxLabel input[type="checkbox"]:checked + span::before {
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+}
+
+.checkboxExample .checkboxLabel input[type="checkbox"]:checked + span::after {
+  content: "✓";
+  color: white;
+  position: absolute;
+  left: 4px;
+  top: 1px;
+  font-size: 12px;
+}
+
+/* Blockquote Example */
+.blockquoteExample blockquote {
+  position: relative;
+  padding: 20px;
+  font-style: italic;
+  background-color: var(--bg-primary);
+  border-left: 4px solid var(--accent-primary);
+  margin: 0;
+}
+
+.blockquoteExample blockquote::before {
+  content: "“";
+  font-size: 4rem;
+  color: var(--accent-primary);
+  position: absolute;
+  left: 10px;
+  top: -20px;
+  line-height: 1;
+}
+
+.blockquoteExample blockquote::after {
+  content: "”";
+  font-size: 4rem;
+  color: var(--accent-primary);
+  position: absolute;
+  right: 10px;
+  bottom: -40px;
+  line-height: 1;
+}
+
+/* Counter Example */
+.counterExample {
+  counter-reset: chapter;
+}
+
+.counterExample h4 {
+  margin: 10px 0;
+}
+
+.counterExample h4::before {
+  counter-increment: chapter;
+  content: "Chapter " counter(chapter) ": ";
+  color: var(--accent-primary);
+  font-weight: bold;
+}
+
+/* Shape Example */
+.shapeExample {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shapeExample .speechBubble {
+  position: relative;
+  background: var(--bg-secondary);
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 200px;
+}
+
+.shapeExample .speechBubble::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 20px;
+  border-width: 10px 10px 0;
+  border-style: solid;
+  border-color: var(--bg-secondary) transparent transparent;
+}
+
+/* Gradient Example */
+.gradientExample .gradientBox {
+  position: relative;
+  padding: 20px;
+  color: white;
+  border-radius: 8px;
+  z-index: 1;
+  text-align: center;
+}
+
+.gradientExample .gradientBox::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, var(--accent-primary), var(--accent-secondary));
+  z-index: -1;
+  border-radius: 8px;
+}
+
+/* Tips List */
+.tipsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.tip {
+  background-color: var(--bg-primary);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.tip h3 {
+  color: var(--accent-light);
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.tip p {
+  color: var(--text-secondary);
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .demoContainer {
+    grid-template-columns: 1fr;
+  }
+  
+  .tipsList {
+    grid-template-columns: 1fr;
+  }
+}

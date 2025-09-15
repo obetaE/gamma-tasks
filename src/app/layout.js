@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar/Navbar'
 import Footer from '@/components/Footer/Footer'
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { Poppins, Playfair_Display } from 'next/font/google';
+import { AuthProvider } from './Providers';
 
 // Configure Poppins
 const poppins = Poppins({
@@ -31,9 +32,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.className} ${poppins.variable} ${playfairDisplay.variable}`}>
+        <AuthProvider>
         <Navbar />
         <main>{children}</main>
         <Footer />
+        </AuthProvider>
       </body>
     </html>
   )

@@ -1,0 +1,469 @@
+.container {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  padding: 2rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, var(--accent-light) 0%, var(--accent-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.header p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+/* Mission Section */
+.missionSection {
+  background: linear-gradient(135deg, var(--russian-violet-2) 0%, var(--persian-indigo) 100%);
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  margin-bottom: 3rem;
+}
+
+.missionContent {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.missionText h2 {
+  color: white;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.missionText p {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.missionStats {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.statIcon {
+  font-size: 2rem;
+  color: var(--accent-light);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.statContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.statNumber {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.statLabel {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+}
+
+/* How It Works Section */
+.howItWorks {
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+}
+
+.howItWorks h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+}
+
+.workflow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.workflowStep {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.stepNumber {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin: 0 auto 1rem;
+}
+
+.workflowStep h3 {
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.workflowStep p {
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* FAQ Section */
+.faqSection {
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+}
+
+.faqHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.faqHeader h2 {
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.faqHeader p {
+  color: var(--text-secondary);
+}
+
+.faqContent {
+  background-color: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+}
+
+.faqCategories {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.categoryButton {
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.categoryButton:hover {
+  background-color: rgba(157, 78, 221, 0.1);
+  border-color: var(--accent-light);
+}
+
+.categoryButton.active {
+  background-color: var(--accent-primary);
+  color: white;
+  border-color: var(--accent-primary);
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faqItem {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+
+.faqItem:last-child {
+  border-bottom: none;
+}
+
+.faqQuestion {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  text-align: left;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.faqAnswer {
+  padding: 0 0 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Support Section */
+.supportSection {
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+}
+
+.supportSection h2 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.supportSection > p {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+.supportGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.supportCard {
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease;
+}
+
+.supportCard:hover {
+  transform: translateY(-5px);
+}
+
+.supportIcon {
+  font-size: 2rem;
+  color: var(--accent-light);
+  margin-bottom: 1rem;
+}
+
+.supportCard h3 {
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.supportCard p {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.supportAction {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--accent-primary);
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.supportAction:hover {
+  background-color: var(--accent-secondary);
+}
+
+.contactInfo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contactIcon {
+  font-size: 1.5rem;
+  color: var(--accent-light);
+  background: rgba(157, 78, 221, 0.1);
+  padding: 0.75rem;
+  border-radius: 50%;
+}
+
+.contactItem h4 {
+  margin-bottom: 0.25rem;
+  color: var(--text-primary);
+}
+
+.contactItem p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* CTA Section */
+.ctaSection {
+  background: linear-gradient(135deg, var(--persian-indigo) 0%, var(--russian-violet-2) 100%);
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.ctaContent {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ctaContent h2 {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.ctaContent p {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.primaryButton, .secondaryButton {
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.primaryButton {
+  background-color: var(--accent-light);
+  color: var(--bg-primary);
+}
+
+.primaryButton:hover {
+  background-color: var(--heliotrope);
+  transform: translateY(-2px);
+}
+
+.secondaryButton {
+  background-color: transparent;
+  color: white;
+  border: 2px solid var(--accent-light);
+}
+
+.secondaryButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .missionContent {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .missionStats {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .workflow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+  }
+  
+  .missionSection {
+    padding: 2rem 1rem;
+  }
+  
+  .workflow {
+    grid-template-columns: 1fr;
+  }
+  
+  .faqCategories {
+    justify-content: center;
+  }
+  
+  .supportGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contactInfo {
+    grid-template-columns: 1fr;
+  }
+  
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .missionStats {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .stat {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .faqQuestion {
+    font-size: 1rem;
+  }
+}
