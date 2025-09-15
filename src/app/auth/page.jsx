@@ -1,28 +1,15 @@
-"use client";
-export const dynamic = "force-dynamic";
-
 import React from "react";
-import { useSearchParams } from "next/navigation";
 import styles from "./login.module.css";
 import AuthForm from "@/components/AuthForm/Authform";
 
-const AuthPage = () => {
-  const searchParams = useSearchParams();
-  const mode = searchParams.get("mode") || "login"; // fallback
+export default function AuthPage({ searchParams }) {
+  const mode = searchParams.mode || "login"; // fallback
 
   return (
     <div className={styles.container}>
       <AuthForm
-        auth={
-          mode === "login"
-            ? "LoginPage"
-            : mode === "register"
-            ? "RegisterPage"
-            : "LoginPage"
-        }
+        auth={mode === "login" ? "LoginPage" : "RegisterPage"}
       />
     </div>
   );
-};
-
-export default AuthPage;
+}
