@@ -1,4 +1,6 @@
-"use client"
+"use client";
+export const dynamic = "force-dynamic";
+
 import React from "react";
 import { useSearchParams } from "next/navigation";
 import styles from "./login.module.css";
@@ -10,7 +12,15 @@ const AuthPage = () => {
 
   return (
     <div className={styles.container}>
-      <AuthForm auth={mode === "login" ? "LoginPage" : "RegisterPage" || mode === "register" ? "RegisterPage" : "LoginPage" } />
+      <AuthForm
+        auth={
+          mode === "login"
+            ? "LoginPage"
+            : mode === "register"
+            ? "RegisterPage"
+            : "LoginPage"
+        }
+      />
     </div>
   );
 };
