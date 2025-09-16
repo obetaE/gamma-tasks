@@ -1,0 +1,471 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: var(--bg-secondary);
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+}
+
+.header h1 {
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+}
+
+.header p {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.tab, .activeTab {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.tab {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.activeTab {
+  background-color: var(--accent-primary);
+  color: white;
+}
+
+.tab:hover {
+  background-color: var(--accent-light);
+  color: white;
+}
+
+.content {
+  background-color: var(--bg-secondary);
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+}
+
+.section h2 {
+  color: var(--accent-primary);
+  margin-top: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent-light);
+}
+
+.description {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.code {
+  background-color: var(--bg-code);
+  color: var(--text-primary);
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 1rem 0;
+  font-family: 'Fira Code', monospace;
+  overflow-x: auto;
+  border: 1px solid var(--border-color);
+  white-space: pre-wrap;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.liveExample {
+  background-color: var(--bg-primary);
+  padding: 1.5rem;
+  border-radius: 5px;
+  margin: 1.5rem 0;
+  border: 1px solid var(--border-color);
+}
+
+.liveExample h3 {
+  margin-top: 0;
+  color: var(--accent-light);
+}
+
+.tip {
+  background-color: var(--bg-tip);
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 1.5rem 0;
+  border-left: 4px solid var(--accent-primary);
+}
+
+.featureList {
+  color: var(--text-secondary);
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+.featureList li {
+  margin-bottom: 0.5rem;
+}
+
+/* Counter Demo Styles */
+.counterDemo {
+  text-align: center;
+  padding: 1rem;
+}
+
+.counterNumber {
+  font-size: 3rem;
+  margin: 0 0 1rem;
+  color: var(--accent-primary);
+}
+
+.counterButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.counterButton {
+  background-color: var(--accent-primary);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counterButton:hover {
+  background-color: var(--accent-secondary);
+}
+
+/* Todo Demo Styles */
+.todoDemo {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.todoForm {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.todoInput {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.button {
+  background-color: var(--accent-primary);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--accent-secondary);
+}
+
+.todoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todoItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.todoItem:last-child {
+  border-bottom: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: var(--text-secondary);
+}
+
+.deleteButton {
+  background-color: var(--accent-warning);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+}
+
+.emptyState {
+  text-align: center;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+/* Search Demo Styles */
+.searchDemo {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.searchResults {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.searchItem {
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--bg-primary);
+}
+
+.searchItem:last-child {
+  border-bottom: none;
+}
+
+.noResults {
+  padding: 0.5rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  background-color: var(--bg-primary);
+}
+
+/* Weather Demo Styles */
+.weatherDemo {
+  text-align: center;
+}
+
+.weatherInfo {
+  display: inline-block;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  background-color: var(--bg-primary);
+}
+
+.loading {
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+/* Blog Demo Styles */
+.blogDemo {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+}
+
+.blogList {
+  border-right: 1px solid var(--border-color);
+  padding-right: 1rem;
+}
+
+.blogListItem {
+  margin-bottom: 0.5rem;
+}
+
+.blogPostButton {
+  background: none;
+  border: none;
+  color: var(--accent-primary);
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+  font: inherit;
+}
+
+.blogPostButton:hover {
+  text-decoration: underline;
+}
+
+.blogPost {
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  background-color: var(--bg-primary);
+}
+
+/* Voting Demo Styles */
+.votingDemo {
+  text-align: center;
+}
+
+.votingOptions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.votingOption {
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  background-color: var(--bg-primary);
+}
+
+.voteCount {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--accent-primary);
+  margin: 0.5rem 0;
+}
+
+.voteButton {
+  background-color: var(--accent-primary);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.voteButton:hover {
+  background-color: var(--accent-secondary);
+}
+
+/* Practice Path Styles */
+.practicePath {
+  background-color: var(--bg-secondary);
+  padding: 2rem;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+}
+
+.practicePath h2 {
+  color: var(--accent-primary);
+  margin-top: 0;
+  text-align: center;
+}
+
+.pathSteps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.stepNumber {
+  background-color: var(--accent-primary);
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-weight: bold;
+}
+
+.stepContent h3 {
+  margin: 0 0 0.5rem;
+  color: var(--accent-light);
+}
+
+.stepContent p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.finalNote {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--bg-primary);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.finalNote p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.nextlesson{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg-secondary);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .tabs {
+    overflow-x: auto;
+    padding-bottom: 1rem;
+  }
+  
+  .blogDemo {
+    grid-template-columns: 1fr;
+  }
+  
+  .blogList {
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    padding-right: 0;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .pathSteps {
+    grid-template-columns: 1fr;
+  }
+}

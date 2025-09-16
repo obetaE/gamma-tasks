@@ -41,6 +41,36 @@
   --transition: all 0.3s ease;
 }
 
+/* Define CSS variables for theming */
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-code: #f1f3f5;
+  --bg-tip: #e8f5e9;
+  --bg-warning: #ffecb3;
+  --text-primary: #212529;
+  --text-secondary: #495057;
+  --accent-primary: #4361ee;
+  --accent-secondary: #3a0ca3;
+  --accent-light: #7209b7;
+  --accent-warning: #f72585;
+  --border-color: #dee2e6;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --bg-code: #2d2d2d;
+    --bg-tip: #1b4332;
+    --bg-warning: #5a189a;
+    --text-primary: #e9ecef;
+    --text-secondary: #adb5bd;
+    --border-color: #343a40;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;

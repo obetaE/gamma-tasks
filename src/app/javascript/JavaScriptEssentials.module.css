@@ -1,0 +1,209 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: var(--bg-secondary);
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+}
+
+.header h1 {
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+}
+
+.header p {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+}
+
+.explanation {
+  background-color: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 1.5rem;
+}
+
+.nextlesson {
+  background-color: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.explanation h2 {
+  color: var(--accent-primary);
+  margin: 1.5rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent-light);
+}
+
+.explanation h3 {
+  color: var(--accent-light);
+  margin: 1.5rem 0 0.5rem;
+}
+
+.list {
+  color: var(--text-secondary);
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+.list li {
+  margin-bottom: 0.5rem;
+}
+
+.analogy {
+  background-color: var(--bg-primary);
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 1rem 0;
+  border-left: 4px solid var(--accent-primary);
+  font-style: italic;
+}
+
+.code {
+  background-color: var(--bg-code);
+  color: var(--text-primary);
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 1rem 0;
+  font-family: 'Fira Code', monospace;
+  overflow-x: auto;
+  border: 1px solid var(--border-color);
+  white-space: pre-wrap;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.tip {
+  background-color: var(--bg-tip);
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 1rem 0;
+  border-left: 4px solid var(--accent-primary);
+}
+
+.warning {
+  background-color: var(--bg-warning);
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 1rem 0;
+  border-left: 4px solid var(--accent-warning);
+}
+
+.errorList {
+  color: var(--text-secondary);
+  padding-left: 1.5rem;
+}
+
+.errorList li {
+  margin-bottom: 0.5rem;
+  color: var(--accent-warning);
+}
+
+.exerciseList {
+  color: var(--text-secondary);
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+.exerciseList li {
+  margin-bottom: 1rem;
+}
+
+.toggleButton {
+  background-color: var(--accent-primary);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 1rem 0;
+  transition: background-color 0.3s;
+}
+
+.toggleButton:hover {
+  background-color: var(--accent-secondary);
+}
+
+.answers {
+  background-color: var(--bg-primary);
+  padding: 1.5rem;
+  border-radius: 5px;
+  margin: 1rem 0;
+  border: 1px solid var(--border-color);
+}
+
+.answerList {
+  color: var(--text-secondary);
+  padding-left: 1.5rem;
+}
+
+.answerList li {
+  margin-bottom: 1rem;
+  font-family: 'Fira Code', monospace;
+}
+
+.cheatsheet {
+  color: var(--text-secondary);
+  padding-left: 1.5rem;
+  columns: 2;
+  column-gap: 2rem;
+}
+
+.cheatsheet li {
+  margin-bottom: 0.5rem;
+  break-inside: avoid;
+  font-family: 'Fira Code', monospace;
+}
+
+.nextSteps {
+  color: var(--text-secondary);
+  padding-left: 1.5rem;
+}
+
+.nextSteps li {
+  margin-bottom: 0.5rem;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+  }
+  
+  .cheatsheet {
+    columns: 1;
+  }
+}
